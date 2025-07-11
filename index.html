@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBMS Learning Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Chapters</h2>
+      <ul>
+        <li><a href="index.html">Chapter 1</a></li>
+        <li><a href="chapter2.html">Chapter 2</a></li> 
+        <li><a href="chapter3.html">Chapter 3</a></li>
+      </ul>
+    </aside>
+    <main class="content">
+        <h1>Chapter 1: Database Fundamentals</h1>
+
+        <h2>1. Data</h2>
+        <p>Data refers to raw facts or figures without context. For example, numbers, names, and dates.</p>
+
+        <h2>2. Information</h2>
+        <p>Information is processed data that has meaning and value. For example, a report showing student scores.</p>
+        <img src="database.jpg" alt="Database Illustration" class="side-image">
+        <h2>3. Features of Information</h2>
+        <ul>
+          <li>Accuracy</li>
+          <li>Relevance</li>
+          <li>Completeness</li>
+          <li>Timeliness</li>
+        </ul>
+
+        <h2>4. Database and its Purpose</h2>
+        <p>A database is an organized collection of data. Its purpose is to store, manage, and retrieve data efficiently.</p>
+        <img src="fire.jpg" alt="Database Fire" class="side-image">
+
+        <h2>5. Terminologies in Database</h2>
+        <ul>
+          <li><strong>Table:</strong> A set of data elements organized in rows and columns.</li>
+          <li><strong>Field:</strong> A single piece of data; a column in a table.</li>
+          <li><strong>Record/Tuple:</strong> A row in a table.</li>
+          <li><strong>Object:</strong> A combination of data and its behavior.</li>
+          <li><strong>Keys:</strong> Unique identifiers for records (e.g., Primary Key).</li>
+        </ul>
+
+        <h2>6. Data Dictionary</h2>
+        <p>It is a set of information describing the contents, format, and structure of a database and the relationship between its elements.</p>
+
+        <h2>7. Database Management System (DBMS)</h2>
+        <h3>Introduction</h3>
+        <p>A software that interacts with users, applications, and the database itself to capture and analyze data.</p>
+        <h3>Objectives</h3>
+        <ul>
+          <li>Data integrity</li>
+          <li>Data security</li>
+          <li>Concurrent access</li>
+        </ul>
+        <h3>Advantages</h3>
+        <ul>
+          <li>Efficient data management</li>
+          <li>Data sharing and backup</li>
+        </ul>
+        <h3>Disadvantages</h3>
+        <ul>
+          <li>High cost</li>
+          <li>Complexity</li>
+        </ul>
+
+        <h2>8. Types of Database Model</h2>
+        <ul>
+          <li><strong>Hierarchical:</strong> Data is organized in a tree-like structure.</li>
+          <li><strong>Network:</strong> More flexible than hierarchical, supports many-to-many relations.</li>
+          <li><strong>Relational:</strong> Data organized in tables.</li>
+          <li><strong>Entity-Relational:</strong> Uses ER diagrams to model data.</li>
+        </ul>
+
+        <h2>9. Integrity Constraints and Types</h2>
+        <ul>
+          <li><strong>Domain:</strong> Ensures data falls within a specific range.</li>
+          <li><strong>Entity:</strong> Ensures each row has a unique identifier.</li>
+          <li><strong>Referential:</strong> Ensures consistency among rows in different tables.</li>
+        </ul>
+
+        <h2>10. Keys</h2>
+        <p>Keys are used to uniquely identify rows in a table. Examples include Primary Key, Foreign Key, Candidate Key.</p>
+
+        <h2>11. Normalization</h2>
+        <h3>Introduction</h3>
+        <p>Process of organizing data to reduce redundancy and improve data integrity.</p>
+        <h3>Normal Forms</h3>
+        <ul>
+          <li>1NF: Eliminate repeating groups</li>
+          <li>2NF: Remove partial dependency</li>
+          <li>3NF: Remove transitive dependency</li>
+        </ul>
+        <h3>Advantages</h3>
+        <ul>
+          <li>Reduces data redundancy</li>
+          <li>Improves data consistency</li>
+        </ul>
+        <h3>Disadvantages</h3>
+        <ul>
+          <li>Complex queries</li>
+          <li>Performance overhead</li>
+        </ul>
+
+        <h2>12. Centralized and Distributed Database</h2>
+        <h3>Introduction</h3>
+        <p>Centralized databases are stored in one location; distributed are spread across multiple locations.</p>
+        <h3>Advantages</h3>
+        <ul>
+          <li>Centralized: Easier to manage</li>
+          <li>Distributed: Improved performance and reliability</li>
+        </ul>
+        <h3>Disadvantages</h3>
+        <ul>
+          <li>Centralized: Risk of failure</li>
+          <li>Distributed: Complex to implement</li>
+        </ul>
+        <h3>Comparison</h3>
+        <p>Each has its pros and cons; choice depends on application needs.</p>
+
+        <h2>13. Database Security</h2>
+        <h3>Introduction</h3>
+        <p>Protecting data from unauthorized access and threats.</p>
+        <h3>Challenges</h3>
+        <ul>
+          <li>SQL injection</li>
+          <li>Data breaches</li>
+        </ul>
+        <h3>Security Measures</h3>
+        <ul>
+          <li>User authentication</li>
+          <li>Access control</li>
+        </ul>
+        <h3>Roles of DBA</h3>
+        <ul>
+          <li>Install and configure DBMS</li>
+          <li>Monitor performance</li>
+          <li>Ensure security</li>
+        </ul>
+
+        <h2>14. Practical Topics</h2>
+        <h3>DDL and DML Languages</h3>
+        <p>DDL (Data Definition Language) defines database structures. DML (Data Manipulation Language) manipulates data.</p>
+
+        <h3>SQL Data Types</h3>
+        <ul>
+          <li>CHAR, VARCHAR, TEXT: Store character data</li>
+          <li>BINARY, VARBINARY, BLOB: Store binary data</li>
+          <li>ENUM, BIT, BOOLEAN: Store logical values</li>
+          <li>INT, FLOAT, DOUBLE, DECIMAL: Numeric types</li>
+          <li>DATE, DATETIME: Temporal data types</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

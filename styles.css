@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e272e;
+  padding: 30px 20px;
+  flex-shrink: 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: #f1c40f;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ffeaa7;
+}
+
+.content,
+.past-year-section {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.03);
+}
+
+.content h1,
+.past-year-section h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #2d3436;
+}
+
+.content h2,
+.past-year-section h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #0984e3;
+}
+
+.content h3,
+.past-year-section h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #636e72;
+}
+
+.content p,
+.past-year-section p {
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+.content ul,
+.content ol,
+.past-year-section ul,
+.past-year-section ol {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.content li,
+.past-year-section li {
+  margin-bottom: 10px;
+}
+
+.side-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .content,
+  .past-year-section {
+    padding: 20px;
+  }
+}
+.sql-output {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  width: 90%;
+  border: 2px dashed #bbb;
+  padding: 10px;
+  border-radius: 8px;
+}
+.sql-code {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  font-family: Consolas, monospace;
+  padding: 12px 16px;
+  margin: 16px 0;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border-radius: 6px;
+  color: #333;
+  font-size: 15px;
+}
+.code-block {
+  background-color: #1e1e1e;
+  color: #f8f8f2;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  font-family: Consolas, monospace;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.output-box {
+  background-color: #f0f0f0;
+  border: 2px dashed #999;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #555;
+  font-style: italic;
+}

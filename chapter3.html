@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBMS Learning Portal - Chapter 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Chapters</h2>
+      <ul>
+        <li><a href="index.html">Chapter 1</a></li>
+        <li><a href="chapter2.html">Chapter 2</a></li>
+        <li><a href="chapter3.html">Chapter 3</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section id="chapter3">
+        <h1>Chapter 3: Working with Functions</h1>
+
+        <h2>1. Define Function</h2>
+        <p>
+          A <strong>function</strong> is a block of code designed to perform a particular task. It runs only when it is called and may take inputs (parameters) and return outputs.
+        </p>
+
+        <h2>2. Syntax of Functions</h2>
+        <div class="code-block">
+<pre>
+return_type function_name(parameters) {
+    // body of the function
+}
+</pre>
+        </div>
+
+        <p>Example in C++:</p>
+        <div class="code-block">
+<pre>
+int add(int a, int b) {
+    return a + b;
+}
+</pre>
+        </div>
+
+        <h2>3. Types of Functions</h2>
+        <ul>
+          <li><strong>Library Functions:</strong> Predefined functions provided by programming languages, like <code>printf()</code>, <code>sqrt()</code>, <code>strlen()</code>.</li>
+          <li><strong>User Defined Functions:</strong> Created by the programmer to perform custom tasks like <code>calculateArea()</code> or <code>checkPrime()</code>.</li>
+        </ul>
+
+        <h2>4. Components of a Function</h2>
+
+        <h3>i. Function Prototype</h3>
+        <p>A declaration of the function that tells the compiler about the function’s name, return type, and parameters before its actual definition.</p>
+        <div class="code-block">
+<pre>
+int add(int, int);
+</pre>
+        </div>
+
+        <h3>ii. Function Call</h3>
+        <p>When we want to execute the function, we call it using its name and pass required parameters.</p>
+        <div class="code-block">
+<pre>
+int sum = add(5, 3);
+</pre>
+        </div>
+
+        <h3>iii. Function Definition</h3>
+        <p>The actual block of code that contains the logic of the function.</p>
+        <div class="code-block">
+<pre>
+int add(int a, int b) {
+    return a + b;
+}
+</pre>
+        </div>
+
+        <h3>iv. Return Type</h3>
+        <p>The type of value the function returns. It can be <code>int</code>, <code>float</code>, <code>void</code>, etc.</p>
+        <div class="code-block">
+<pre>
+void showMessage() {
+    cout << "Welcome to DBMS Portal!";
+}
+</pre>
+        </div>
+
+        <h2>2. Categories of Functions</h2>
+
+        <h3>i. Function with Return Type but No Arguments</h3>
+        <p>This type of function returns a value but takes no arguments. It is useful when the logic doesn't depend on user input but still gives a result.</p>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int getNumber() {
+    return 10;
+}
+
+int main() {
+    int x = getNumber();
+    printf("Returned Number: %d\n", x);
+    printf("Executed by Rojit Khadka\n");
+    return 0;
+}
+</pre>
+        </div>
+        <div class="output-box">
+          <img src="first.png" alt="Output Screenshot for getNumber function" style="max-width:100%; height:auto;">
+        </div>
+
+        <h3>ii. Function with Return Type and with Arguments</h3>
+        <p>This function accepts input arguments and returns a value. It is most commonly used when both input and output are required.</p>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    int result = multiply(6, 7);
+    printf("Multiplication Result: %d\n", result);
+    printf("Executed by Rojit Khadka\n");
+    return 0;
+}
+</pre>
+        </div>
+        <div class="output-box">
+          <img src="second.png" alt="Output Screenshot for multiply function" style="max-width:100%; height:auto;">
+        </div>
+
+        <h3>iii. Function with No Return Type and No Arguments</h3>
+        <p>This function neither receives any arguments nor returns a value. It just performs a specific task, like displaying a message.</p>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+void message() {
+    printf("Welcome to DBMS Chapter 3\n");
+}
+
+int main() {
+    message();
+    printf("Executed by Rojit Khadka\n");
+    return 0;
+}
+</pre>
+        </div>
+        <div class="output-box">
+          <img src="third.png" alt="Output Screenshot for message function" style="max-width:100%; height:auto;">
+        </div>
+
+        <h3>iv. Function with No Return Type but with Arguments</h3>
+        <p>This function takes arguments but does not return a value. It is useful when an action needs to be performed using external input.</p>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+void greet(char name[]) {
+    printf("Hello, %s!\n", name);
+}
+
+int main() {
+    greet("Sumi");
+    printf("Executed by Rojit Khadka\n");
+    return 0;
+}
+</pre>
+        </div>
+        <div class="output-box">
+          <img src="fourth.png" alt="Output Screenshot for greet function" style="max-width:100%; height:auto;">
+        </div>
+
+        <h2>3. Storage Classes</h2>
+        <p>
+        Storage classes in C determine a variable’s <strong>scope</strong> (where it can be accessed), <strong>lifetime</strong> (how long it exists in memory), <strong>default initial value</strong>, and <strong>storage location</strong>. There are four main storage classes in C programming:
+        </p>
+
+        <h3>i. Automatic Storage Class (<code>auto</code>)</h3>
+        <p>
+        The <code>auto</code> keyword defines local variables with automatic storage. These are created when a function is called and destroyed when it ends.
+        </p>
+        <ul>
+          <li><strong>Scope:</strong> Local to the function/block</li>
+          <li><strong>Lifetime:</strong> Till function execution</li>
+          <li><strong>Default Value:</strong> Garbage (undefined)</li>
+          <li><strong>Storage Location:</strong> Memory (RAM)</li>
+        </ul>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+void show() {
+    auto int x = 10;
+    printf("Value of x: %d\\n", x);
+}
+</pre>
+        </div>
+
+        <h3>ii. External Storage Class (<code>extern</code>)</h3>
+        <p>
+        <code>extern</code> is used to declare a global variable or function that is defined elsewhere. It tells the compiler the variable exists, but memory will be allocated somewhere else.
+        </p>
+        <ul>
+          <li><strong>Scope:</strong> Global (all files)</li>
+          <li><strong>Lifetime:</strong> Entire program</li>
+          <li><strong>Default Value:</strong> 0</li>
+          <li><strong>Storage Location:</strong> Memory (RAM)</li>
+        </ul>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+extern int a;
+
+int main() {
+    printf("Value of a: %d\\n", a);
+    return 0;
+}
+
+int a = 25;
+</pre>
+        </div>
+
+        <h3>iii. Register Storage Class (<code>register</code>)</h3>
+        <p>
+        <code>register</code> requests the compiler to store the variable in a CPU register instead of RAM for faster access. Cannot take address using <code>&amp;</code> operator.
+        </p>
+        <ul>
+          <li><strong>Scope:</strong> Local</li>
+          <li><strong>Lifetime:</strong> Till block exits</li>
+          <li><strong>Default Value:</strong> Garbage</li>
+          <li><strong>Storage Location:</strong> CPU Register (if available)</li>
+        </ul>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    register int speed = 100;
+    printf("Speed: %d km/h\\n", speed);
+    return 0;
+}
+</pre>
+        </div>
+
+        <h3>iv. Static Storage Class (<code>static</code>)</h3>
+        <p>
+        A <code>static</code> variable retains its value between multiple function calls. It is initialized only once and not re-created each time the function runs.
+        </p>
+        <ul>
+          <li><strong>Scope:</strong> Local to block</li>
+          <li><strong>Lifetime:</strong> Entire program</li>
+          <li><strong>Default Value:</strong> 0</li>
+          <li><strong>Storage Location:</strong> Memory (RAM)</li>
+        </ul>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+void counter() {
+    static int count = 0;
+    count++;
+    printf("Counter: %d\\n", count);
+}
+
+int main() {
+    counter();
+    counter();
+    counter();
+    return 0;
+}
+</pre>
+        </div>
+<h2>4. Recursive Function</h2>
+<p>A recursive function is a function that calls itself to solve a smaller sub-problem of the main task.</p>
+
+<h3>Syntax</h3>
+<div class="code-block">
+<pre>
+return_type function_name() {
+    if (base_condition)
+        return result;
+    else
+        return function_name(); // recursive call
+}
+</pre>
+</div>
+
+<h3>Example: Factorial using Recursion</h3>
+<div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int result = factorial(5);
+    printf("Factorial: %d \n", result);
+    printf("Executed by Rojit Khadka \n");
+    return 0;
+}
+</pre>
+</div>
+<div class="output-box">
+  <img src="factorial.png" alt="Recursive factorial output" style="max-width:100%; height:auto;">
+</div>
+<h2>5. Passing Array to a Function</h2>
+<p>Arrays can be passed to a function by passing the array name (which acts as a pointer).</p>
+
+<h3>Example: Print Elements of Array</h3>
+<div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+
+int main() {
+    int nums[] = {1, 2, 3, 4, 5};
+    printArray(nums, 5);
+    printf("\\nExecuted by Rojit Khadka\\n");
+    return 0;
+}
+</pre>
+</div>
+<div class="output-box">
+  <img src="array.png" alt="Array function output" style="max-width:100%; height:auto;">
+</div>
+<h2>6. Past Year Questions of Functions (2020-2024 and Model Questions)</h2>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
